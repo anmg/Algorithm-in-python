@@ -36,7 +36,7 @@ def jumpfloor(number):
 # print jumpfloor(4)
 # print jumpfloor(5)
 
-def get_Fibonacci_byidx(number):
+def get_Fibonacci_byIdx(number):
     if number == 0:
         return 0
     if number == 1:
