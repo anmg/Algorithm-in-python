@@ -5,24 +5,23 @@ class ListNode:
 
 class Solution:
     def Merge(self, pHead1, pHead2):
+        count = 0
         res = ListNode(0)
         head = res
-        while(pHead1.next != None and pHead2.next != None):
+        while(pHead1 != None and pHead2 != None):
             if pHead1.val > pHead2.val:
-                print pHead2.val
+                count += 1
                 res.next = pHead2
                 pHead2 = pHead2.next
                 res = res.next
             else:
-                print pHead1.val
+                count += 1
                 res.next = pHead1
                 pHead1 = pHead1.next
                 res = res.next
         if pHead1 == None:
-           print pHead2.val
            res.next = pHead2
         if pHead2 == None:
-           print pHead1.val
            res.next = pHead1
 
         return head.next
@@ -50,7 +49,7 @@ node7.next = node9
 pMerge = solution.Merge(node1, node3)
 
 print "------------------------"
-while pMerge.next != None:
+while pMerge != None:
     print pMerge.val
     pMerge = pMerge.next
 
