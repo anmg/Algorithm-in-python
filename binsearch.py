@@ -1,6 +1,6 @@
 def binsearch(arr, start, end, value):
     l = start
-    u = end-1
+    u = end
     while(l < u):
         mid = l+(u-l)/2+1
         if value < arr[mid]:
@@ -10,5 +10,5 @@ def binsearch(arr, start, end, value):
         else:
             return mid
 
-print binsearch([0,1,2,5,6,8,9], 0, 6, 2)
+print binsearch([0,1,2,5,6,8,9], 0, 6, 9)
 
