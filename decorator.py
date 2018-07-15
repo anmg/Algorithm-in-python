@@ -1,16 +1,23 @@
-def ensure_connection(method, return_value)
-    """
-    simple decorator that retry when error
-    """
-    def _decorator(self, *args, **kwargs):
-        try:
-            method(self, *args, **args)
-        except Exception as e:
-            #reconnect
-            self._connect_()
-            try:
-                return method(self, *args, **kwargs)
-            except Exception as e2:
-                raise e2
 
-    return _decorator
+#send para
+def logging(level):
+    #func
+    def wrapper(func):
+        def inner_wrapper(*args, **kwargs):
+            print "[{level}]: enter funtion {func}()".format(level = level, func = func.__name__)
+            
+            return func(*args, **kwargs)
+        return inner_wrapper
+    return wrapper
+
+@logging(level='INFO')
+def say(something):
+    print "say {}!".format(something)
+
+@logging(level='DEBUG')
+def do(something):
+    print "do {}...".format(something)
+
+if __name__ == '__main__':
+    say('hello')
+    do("my work")
