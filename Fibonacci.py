@@ -5,10 +5,10 @@ def Fabonacci(number):
     print a
     print b
 
-    while(b<number):
+    while(b < number):
         temp = a
         a = b
-        b = b+temp
+        b = b + temp
         print b
 Fabonacci(5)
 
@@ -22,7 +22,7 @@ def jumpfloor(number):
 
     a = 1
     b = 2
-    while number>2:
+    while number > 2:
         temp = a
         a = b
         b = b + temp
