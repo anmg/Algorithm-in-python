@@ -14,9 +14,9 @@ Fabonacci(5)
 
 def jumpfloor(number):
     if number == 0:
-        return  0
+        return 0
     if number == 1:
-        return  1
+        return 1
     if number == 2:
         return 2
 
@@ -56,3 +56,7 @@ def get_Fibonacci_byIdx(number):
 
 
 print get_Fibonacci_byIdx(10)
+
+
+
+
