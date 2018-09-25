@@ -1,0 +1,18 @@
+#统计出现最多的字符以及次数
+def bigchar(arry):
+    coun=1
+    dic={}
+    key=''
+    for i in arry:
+       if dic.has_key(i):
+           
+           dic[i]=dic[i]+1
+	   if coun<dic[i]:
+               coun=dic[i]
+               key=i
+           print dic
+       else:
+           dic[i]=1
+    return coun,key
+
+print bigchar('fadhyty4242qaaffdfa')

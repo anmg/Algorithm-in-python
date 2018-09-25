@@ -52,8 +52,8 @@ def get_Fibonacci_byIdx(number):
         arr.append(b)
 
     if len(arr)> number:
+        print arr
         return arr[number]
-
 
 print get_Fibonacci_byIdx(10)
 
