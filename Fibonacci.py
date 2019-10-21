@@ -2,15 +2,15 @@
 def Fabonacci(number):
     a=0
     b=1
-    print a
-    print b
+ #   print a
+ #   print b
 
     while(b < number):
         temp = a
         a = b
         b = b + temp
-        print b
-Fabonacci(5)
+ #       print b
+#Fabonacci(5)
 
 def jumpfloor(number):
     if number == 0:
@@ -30,11 +30,11 @@ def jumpfloor(number):
 
     return b
 
-# print jumpfloor(1)
-# print jumpfloor(2)
-# print jumpfloor(3)
-# print jumpfloor(4)
-# print jumpfloor(5)
+print jumpfloor(1)
+print jumpfloor(2)
+print jumpfloor(3)
+print jumpfloor(4)
+print jumpfloor(5)
 
 def get_Fibonacci_byIdx(number):
     if number == 0:
@@ -45,17 +45,17 @@ def get_Fibonacci_byIdx(number):
     arr = [0, 1]
     a = 0
     b = 1
-    while len(arr) <= number:
+    while len(arr) < number:
         temp = a
         a = b
         b = b + temp
         arr.append(b)
 
-    if len(arr)> number:
-        print arr
-        return arr[number]
+    if len(arr) >= number:
+ #       print arr
+        return arr[number-1]
 
-print get_Fibonacci_byIdx(10)
+#print get_Fibonacci_byIdx(10)
 
 
 
